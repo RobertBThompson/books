@@ -1,0 +1,429 @@
+/* =====================================================================
+   THE HEART OF JOSEPH — retailer landing page
+   Palette: deep navy, warm parchment, antique gold accent.
+   Display face: Playfair Display. Body face: Lora.
+   ===================================================================== */
+
+:root {
+  --navy-900: #0f1a2e;
+  --navy-800: #152238;
+  --navy-700: #223350;
+  --gold: #a97e3f;
+  --gold-light: #c9a266;
+  --parchment: #f8f3ea;
+  --parchment-card: #fffdf9;
+  --ink: #2b2620;
+  --ink-soft: #574f42;
+  --rule: #e3d9c6;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+
+  --max-width: 1080px;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--parchment);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------------
+   HERO
+   To use a real photo instead of the gradient: give <header> the extra
+   class "hero--photo" and uncomment the rule at the bottom of this
+   section, pointing background-image at your file.
+--------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  background: radial-gradient(ellipse 120% 90% at 50% -10%, #2a3f63 0%, var(--navy-800) 55%, var(--navy-900) 100%);
+  color: #f3ede0;
+  padding: 4.5rem 1.5rem 7rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__arch {
+  width: 220px;
+  margin: 0 auto 1.75rem;
+  color: var(--gold-light);
+  opacity: 0.85;
+}
+
+.hero__arch svg,
+.divider svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.hero__content {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-style: italic;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  margin: 0 0 1.25rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  color: #fdfbf5;
+}
+
+.hero__tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  margin: 1.5rem 0 0;
+}
+
+/* book cover placeholder, floats over the bottom edge of the hero */
+.book-mockup {
+  position: relative;
+  z-index: 2;
+  width: 220px;
+  aspect-ratio: 2 / 3;
+  margin: 3rem auto -6rem;
+  border-radius: 6px 10px 10px 6px;
+  background: linear-gradient(135deg, #1c2c48, var(--navy-700) 60%, #0b1524);
+  border: 1px solid rgba(201, 162, 102, 0.4);
+  box-shadow:
+    -6px 0 0 rgba(0,0,0,0.25) inset,
+    0 25px 45px -15px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.book-mockup__title {
+  font-family: var(--font-display);
+  color: #f3ede0;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+
+.book-mockup__label {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  border-top: 1px solid rgba(201, 162, 102, 0.4);
+  padding-top: 0.75rem;
+}
+
+/* Example for swapping in a real cover photo later:
+.hero--photo {
+  background-image: linear-gradient(180deg, rgba(15,26,46,0.35), rgba(15,26,46,0.85)), url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+*/
+
+/* ---------------------------------------------------------------------
+   DIVIDER (reused between hero/intro and before the closing quote)
+--------------------------------------------------------------------- */
+
+.divider {
+  width: 70px;
+  margin: 0 auto 1.5rem;
+  color: var(--gold);
+}
+
+.divider--light {
+  color: var(--gold-light);
+}
+
+/* ---------------------------------------------------------------------
+   INTRO
+--------------------------------------------------------------------- */
+
+.intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  color: var(--navy-800);
+}
+
+.intro__body {
+  max-width: 560px;
+  margin: 1.5rem auto 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+.pillar {
+  min-width: 0;
+}
+
+.pillar svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  margin-bottom: 0.9rem;
+}
+
+.pillar h3 {
+  font-size: 1.02rem;
+  color: var(--navy-800);
+  margin-bottom: 0.4rem;
+}
+
+.pillar p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------------
+   FORMAT CARDS
+--------------------------------------------------------------------- */
+
+.formats {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.format-card {
+  background: var(--parchment-card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 2rem 2.25rem 2.25rem;
+  box-shadow: 0 10px 30px -18px rgba(15, 26, 46, 0.25);
+}
+
+.format-card--wide {
+  grid-column: 1 / -1;
+}
+
+.format-card h2 {
+  font-size: 1.5rem;
+  color: var(--navy-800);
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+}
+
+.format-card__desc {
+  color: var(--ink-soft);
+  margin: 0.9rem 0 1.5rem;
+}
+
+.buy-group {
+  margin-bottom: 1.4rem;
+}
+
+.buy-group:last-child {
+  margin-bottom: 0;
+}
+
+.buy-group__label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.6rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: 999px;
+  margin: 0 0.5rem 0.5rem 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--navy-800);
+  color: #fdfbf5;
+}
+
+.btn--primary:hover {
+  background: var(--navy-900);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px -6px rgba(15, 26, 46, 0.45);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--navy-800);
+  border: 1.5px solid var(--gold);
+}
+
+.btn--secondary:hover {
+  background: var(--gold);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.ebook-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.isbn-note {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0;
+}
+
+/* ---------------------------------------------------------------------
+   QUOTE BANNER
+--------------------------------------------------------------------- */
+
+.quote-banner {
+  background: linear-gradient(180deg, var(--navy-900), var(--navy-800));
+  color: #f3ede0;
+  text-align: center;
+  padding: 5rem 1.5rem;
+}
+
+.quote-banner blockquote {
+  max-width: 620px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+  line-height: 1.5;
+}
+
+.quote-banner cite {
+  display: block;
+  margin-top: 1.25rem;
+  font-family: var(--font-body);
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--gold-light);
+}
+
+/* ---------------------------------------------------------------------
+   FOOTER
+--------------------------------------------------------------------- */
+
+.site-footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--parchment);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0.2rem 0;
+}
+
+.site-footer__note {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------------------- */
+
+@media (max-width: 760px) {
+  .pillars {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .formats {
+    grid-template-columns: 1fr;
+  }
+
+  .book-mockup {
+    margin-bottom: -4rem;
+  }
+
+  .intro {
+    padding-top: 6.5rem;
+  }
+}

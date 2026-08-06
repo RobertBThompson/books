@@ -4,143 +4,174 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Heart of Joseph — Where to Buy</title>
-<style>
-  :root {
-    --accent: #7a3b1e;
-    --accent-dark: #5c2b14;
-    --bg: #faf7f2;
-    --card-bg: #ffffff;
-    --text: #2c2c2c;
-  }
-  body {
-    font-family: 'Georgia', serif;
-    background: var(--bg);
-    color: var(--text);
-    margin: 0;
-    padding: 0 1rem 4rem;
-  }
-  h1.page-title {
-    text-align: center;
-    padding: 2.5rem 1rem 1rem;
-    font-size: 2rem;
-  }
-  p.subtitle {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-    color: #555;
-  }
-  .format-section {
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
-    background: var(--card-bg);
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    padding: 1.75rem 2rem;
-  }
-  .format-section h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
-    border-bottom: 2px solid var(--accent);
-    padding-bottom: 0.5rem;
-  }
-  .format-desc {
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-  .btn {
-    display: inline-block;
-    text-decoration: none;
-    background: var(--accent);
-    color: #fff;
-    padding: 0.7rem 1.4rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    margin: 0.3rem 0.4rem 0.3rem 0;
-    transition: background 0.2s ease;
-  }
-  .btn:hover {
-    background: var(--accent-dark);
-  }
-  .isbn-note {
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 0.75rem;
-  }
-  .ebook-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
-  }
-  .ebook-buttons .btn {
-    flex: 1 1 auto;
-    text-align: center;
-    min-width: 150px;
-  }
-</style>
+<meta name="description" content="The Heart of Joseph, a biography of Joseph Smith by Robert B. Thompson. Available in hardcover, paperback, and ebook.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 class="page-title">The Heart of Joseph</h1>
-  <p class="subtitle">Available in hardback, paperback, and ebook — choose the format and retailer that works best for you.</p>
-
-  <!-- HARDBACK SECTION -->
-  <section class="format-section">
-    <h2>Hardback</h2>
-    <p class="format-desc">
-      Available at Amazon, bookstores via IngramSpark distribution, and libraries.
-    </p>
-    <a class="btn" href="https://www.amazon.com/dp/ASIN_HARDBACK_HERE" target="_blank" rel="noopener">
-      Buy on Amazon
-    </a>
-    <p class="isbn-note">
-      Order through your bookstore (ISBN: 979-8-9967461-0-1) — ask your local bookseller or library to order via Ingram.
-    </p>
-  </section>
-
-  <!-- PAPERBACK SECTION -->
-  <section class="format-section">
-    <h2>Paperback</h2>
-    <p class="format-desc">
-      Available at Amazon (via KDP) and through traditional bookstore and library channels via IngramSpark.
-    </p>
-    <a class="btn" href="https://www.amazon.com/dp/ASIN_PAPERBACK_HERE" target="_blank" rel="noopener">
-      Buy on Amazon
-    </a>
-    <p class="isbn-note">
-      Order through your bookstore (ISBN: 979-8-9967461-1-8) — available for wholesale ordering via IngramSpark.
-    </p>
-  </section>
-
-  <!-- EBOOK SECTION -->
-  <section class="format-section">
-    <h2>eBook</h2>
-    <p class="format-desc">
-      Available across all major ebook platforms.
-    </p>
-    <div class="ebook-buttons">
-      <a class="btn" href="https://www.amazon.com/dp/ASIN_KINDLE_HERE" target="_blank" rel="noopener">
-        Kindle (Amazon)
-      </a>
-      <a class="btn" href="https://books.apple.com/book/APPLE_LINK_HERE" target="_blank" rel="noopener">
-        Apple Books
-      </a>
-      <a class="btn" href="https://www.kobo.com/ebook/KOBO_LINK_HERE" target="_blank" rel="noopener">
-        Kobo
-      </a>
-      <a class="btn" href="https://www.scribd.com/book/SCRIBD_LINK_HERE" target="_blank" rel="noopener">
-        Scribd / OverDrive
-      </a>
-      <a class="btn" href="https://play.google.com/store/books/details?id=GOOGLE_PLAY_ID_HERE" target="_blank" rel="noopener">
-        Google Play Books
-      </a>
-      <a class="btn" href="https://www.barnesandnoble.com/w/BN_NOOK_LINK_HERE" target="_blank" rel="noopener">
-        Barnes &amp; Noble Nook
-      </a>
+  <!-- ============================================================
+       HERO
+       To swap in a real photo background later: add a class like
+       "hero--photo" to <header class="hero"> below, and in style.css
+       give .hero--photo a background-image rule. Recommended image:
+       a wide, light-toned landscape or architectural shot, at least
+       1920px wide, so the gradient overlay still keeps the title
+       readable. See the comment above .hero in style.css.
+  ============================================================= -->
+  <header class="hero">
+    <div class="hero__arch" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 190 L20 90 C20 45 55 15 100 15 C145 15 180 45 180 90 L180 190" />
+        <line x1="20" y1="190" x2="20" y2="150" />
+        <line x1="180" y1="190" x2="180" y2="150" />
+        <circle cx="100" cy="10" r="3" fill="currentColor" stroke="none" />
+      </svg>
     </div>
+
+    <div class="hero__content">
+      <p class="eyebrow">Inspired by Faith. Rooted in Truth.</p>
+      <h1>The Heart<br>of Joseph</h1>
+      <p class="hero__tagline">A Prophetic Life. A Lasting Legacy.</p>
+    </div>
+
+    <!-- ============================================================
+         BOOK COVER PLACEHOLDER
+         Replace the contents of .book-mockup with:
+           <img src="cover.jpg" alt="The Heart of Joseph book cover">
+         and remove .book-mockup__label. Recommended image: a portrait
+         crop of your front cover only (not the full wrap), at least
+         800px tall.
+    ============================================================= -->
+    <div class="book-mockup" role="img" aria-label="The Heart of Joseph book cover, placeholder">
+      <span class="book-mockup__title">The Heart<br>of Joseph</span>
+      <span class="book-mockup__label">Replace with cover.jpg</span>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       INTRODUCTION
+  ============================================================= -->
+  <main>
+    <section class="intro">
+      <div class="divider" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 190 L20 90 C20 45 55 15 100 15 C145 15 180 45 180 90 L180 190" />
+          <line x1="20" y1="190" x2="20" y2="150" />
+          <line x1="180" y1="190" x2="180" y2="150" />
+        </svg>
+      </div>
+      <h2>Discover the Character and Soul<br>of Joseph Smith</h2>
+      <p class="intro__body">
+        An intimate, documented portrait told through firsthand witness accounts,
+        Joseph's own words, and every surviving letter he wrote to his wife Emma —
+        organized from his physical presence to his highest eternal calling.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40 C10 30 4 22 4 14 C4 7 9 3 15 3 C19 3 22.5 5 24 9 C25.5 5 29 3 33 3 C39 3 44 7 44 14 C44 22 38 30 24 40 Z"/></svg>
+          <h3>Physical &amp; Spiritual Gifts</h3>
+          <p>His commanding presence, his strength, his gifts of the spirit.</p>
+        </div>
+        <div class="pillar">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 10 C4 10 14 6 24 12 C34 6 44 10 44 10 L44 38 C44 38 34 34 24 40 C14 34 4 38 4 38 Z"/><line x1="24" y1="12" x2="24" y2="40"/></svg>
+          <h3>Character &amp; Relationships</h3>
+          <p>His playfulness, his friendships, his temperament, his generosity.</p>
+        </div>
+        <div class="pillar">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 44 L8 22 C8 12 15 4 24 4 C33 4 40 12 40 22 L40 44 Z"/><line x1="4" y1="44" x2="44" y2="44"/><line x1="24" y1="4" x2="24" y2="0"/></svg>
+          <h3>A Higher, Eternal Calling</h3>
+          <p>His mission, his sacrifice, and the legacy that endures today.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FORMATS
+    ============================================================= -->
+    <section class="formats">
+
+      <article class="format-card">
+        <h2>Hardcover</h2>
+        <p class="format-card__desc">A premium edition, beautifully bound.</p>
+
+        <div class="buy-group">
+          <span class="buy-group__label">Buy direct</span>
+          <a class="btn btn--primary" href="https://www.amazon.com/dp/ASIN_HARDBACK_HERE" target="_blank" rel="noopener">Amazon</a>
+        </div>
+        <div class="buy-group">
+          <span class="buy-group__label">Order through your bookstore or library</span>
+          <a class="btn btn--secondary" href="https://www.ingramspark.com/book-search?isbn=9798996746101" target="_blank" rel="noopener">IngramSpark</a>
+          <p class="isbn-note">ISBN: 979-8-9967461-0-1 — available for wholesale ordering to any bookstore or library.</p>
+        </div>
+      </article>
+
+      <article class="format-card">
+        <h2>Paperback</h2>
+        <p class="format-card__desc">A high-quality edition for study and sharing.</p>
+
+        <div class="buy-group">
+          <span class="buy-group__label">Buy direct</span>
+          <a class="btn btn--primary" href="https://www.amazon.com/dp/ASIN_PAPERBACK_HERE" target="_blank" rel="noopener">Amazon</a>
+        </div>
+        <div class="buy-group">
+          <span class="buy-group__label">Order through your bookstore or library</span>
+          <a class="btn btn--secondary" href="https://www.ingramspark.com/book-search?isbn=9798996746118" target="_blank" rel="noopener">IngramSpark</a>
+          <p class="isbn-note">ISBN: 979-8-9967461-1-8 — available for wholesale ordering to any bookstore or library.</p>
+        </div>
+      </article>
+
+      <article class="format-card format-card--wide">
+        <h2>eBook</h2>
+        <p class="format-card__desc">Read instantly on any device.</p>
+
+        <div class="buy-group">
+          <span class="buy-group__label">Buy direct</span>
+          <a class="btn btn--primary" href="https://www.amazon.com/dp/ASIN_KINDLE_HERE" target="_blank" rel="noopener">Kindle (Amazon)</a>
+        </div>
+
+        <div class="buy-group">
+          <span class="buy-group__label">Also available through</span>
+          <div class="ebook-grid">
+            <a class="btn btn--secondary" href="https://books.apple.com/book/APPLE_LINK_HERE" target="_blank" rel="noopener">Apple Books</a>
+            <a class="btn btn--secondary" href="https://www.kobo.com/ebook/KOBO_LINK_HERE" target="_blank" rel="noopener">Kobo</a>
+            <a class="btn btn--secondary" href="https://www.overdrive.com/media/OVERDRIVE_LINK_HERE" target="_blank" rel="noopener">OverDrive</a>
+            <a class="btn btn--secondary" href="https://play.google.com/store/books/details?id=GOOGLE_PLAY_ID_HERE" target="_blank" rel="noopener">Google Play Books</a>
+            <a class="btn btn--secondary" href="https://www.everand.com/book/EVERAND_LINK_HERE" target="_blank" rel="noopener">Everand</a>
+            <a class="btn btn--secondary" href="https://www.barnesandnoble.com/w/BN_NOOK_LINK_HERE" target="_blank" rel="noopener">Barnes &amp; Noble</a>
+            <a class="btn btn--secondary" href="https://www.booksamillion.com/p/BAM_LINK_HERE" target="_blank" rel="noopener">Books-A-Million</a>
+          </div>
+          <p class="isbn-note">Distributed via Draft2Digital to these and other retailers and library platforms worldwide.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ============================================================
+       QUOTE BANNER
+  ============================================================= -->
+  <section class="quote-banner">
+    <div class="divider divider--light" aria-hidden="true">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 190 L20 90 C20 45 55 15 100 15 C145 15 180 45 180 90 L180 190" />
+        <line x1="20" y1="190" x2="20" y2="150" />
+        <line x1="180" y1="190" x2="180" y2="150" />
+      </svg>
+    </div>
+    <blockquote>
+      "The things of God cannot be accomplished save it be by revelation."
+      <cite>Joseph Smith</cite>
+    </blockquote>
   </section>
+
+  <footer class="site-footer">
+    <p>The Heart of Joseph — Robert B. Thompson</p>
+    <p class="site-footer__note">More books by Robert B. Thompson coming soon.</p>
+  </footer>
 
 </body>
 </html>
