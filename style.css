@@ -132,7 +132,7 @@ button:focus-visible {
   margin: 1.5rem 0 0;
 }
 
-/* book cover placeholder, floats over the bottom edge of the hero */
+/* book cover, floats over the bottom edge of the hero */
 .book-mockup {
   position: relative;
   z-index: 2;
@@ -140,54 +140,16 @@ button:focus-visible {
   aspect-ratio: 2 / 3;
   margin: 3rem auto -6rem;
   border-radius: 6px 10px 10px 6px;
-  background: linear-gradient(135deg, #24375c, var(--navy-700) 55%, #0b1524);
   border: 1px solid rgba(201, 162, 102, 0.4);
-  box-shadow:
-    0 25px 45px -15px rgba(0,0,0,0.55);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-  text-align: center;
+  box-shadow: 0 25px 45px -15px rgba(0,0,0,0.55);
   overflow: hidden;
 }
 
-.book-mockup__spine {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 14px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.5), transparent);
-}
-
-.book-mockup__spine::after {
-  content: "";
-  position: absolute;
-  left: 14px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, rgba(201,162,102,0.5), rgba(201,162,102,0.15));
-}
-
-.book-mockup__title {
-  font-family: var(--font-display);
-  color: #f3ede0;
-  font-size: 1.4rem;
-  line-height: 1.25;
-}
-
-.book-mockup__label {
-  margin-top: 1rem;
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  border-top: 1px solid rgba(201, 162, 102, 0.4);
-  padding-top: 0.75rem;
+.book-mockup img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Example for swapping in a real cover photo later:
