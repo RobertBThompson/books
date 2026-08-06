@@ -16,10 +16,11 @@
        HERO
        To swap in a real photo background later: add a class like
        "hero--photo" to <header class="hero"> below, and in style.css
-       give .hero--photo a background-image rule. Recommended image:
-       a wide, light-toned landscape or architectural shot, at least
-       1920px wide, so the gradient overlay still keeps the title
-       readable. See the comment above .hero in style.css.
+       give .hero--photo a background-image rule pointing at
+       assets/hero.jpg. Recommended: a wide, light-toned landscape or
+       architectural shot, at least 1920px wide, so the gradient
+       overlay still keeps the title readable. See the comment above
+       .hero in style.css.
   ============================================================= -->
   <header class="hero">
     <div class="hero__arch" aria-hidden="true">
@@ -40,14 +41,15 @@
     <!-- ============================================================
          BOOK COVER PLACEHOLDER
          Replace the contents of .book-mockup with:
-           <img src="cover.jpg" alt="The Heart of Joseph book cover">
-         and remove .book-mockup__label. Recommended image: a portrait
-         crop of your front cover only (not the full wrap), at least
-         800px tall.
+           <img src="assets/cover.jpg" alt="The Heart of Joseph book cover">
+         and remove .book-mockup__label and .book-mockup__spine.
+         Recommended: a portrait crop of your front cover only (not
+         the full wrap), at least 1000x1500px.
     ============================================================= -->
     <div class="book-mockup" role="img" aria-label="The Heart of Joseph book cover, placeholder">
+      <span class="book-mockup__spine" aria-hidden="true"></span>
       <span class="book-mockup__title">The Heart<br>of Joseph</span>
-      <span class="book-mockup__label">Replace with cover.jpg</span>
+      <span class="book-mockup__label">Replace with assets/cover.jpg</span>
     </div>
   </header>
 

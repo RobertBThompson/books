@@ -140,10 +140,9 @@ button:focus-visible {
   aspect-ratio: 2 / 3;
   margin: 3rem auto -6rem;
   border-radius: 6px 10px 10px 6px;
-  background: linear-gradient(135deg, #1c2c48, var(--navy-700) 60%, #0b1524);
+  background: linear-gradient(135deg, #24375c, var(--navy-700) 55%, #0b1524);
   border: 1px solid rgba(201, 162, 102, 0.4);
   box-shadow:
-    -6px 0 0 rgba(0,0,0,0.25) inset,
     0 25px 45px -15px rgba(0,0,0,0.55);
   display: flex;
   flex-direction: column;
@@ -151,6 +150,26 @@ button:focus-visible {
   justify-content: center;
   padding: 1.5rem;
   text-align: center;
+  overflow: hidden;
+}
+
+.book-mockup__spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.5), transparent);
+}
+
+.book-mockup__spine::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(201,162,102,0.5), rgba(201,162,102,0.15));
 }
 
 .book-mockup__title {
@@ -313,9 +332,9 @@ button:focus-visible {
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.92rem;
-  padding: 0.65rem 1.35rem;
+  padding: 0.85rem 1.5rem;
   border-radius: 999px;
-  margin: 0 0.5rem 0.5rem 0;
+  margin: 0 0.5rem 0.6rem 0;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
@@ -419,11 +438,28 @@ button:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding: 3.5rem 1.25rem 6rem;
+  }
+
+  .hero__arch {
+    width: 160px;
+  }
+
   .book-mockup {
     margin-bottom: -4rem;
   }
 
   .intro {
     padding-top: 6.5rem;
+  }
+
+  .format-card {
+    padding: 1.75rem 1.5rem 2rem;
+  }
+
+  .ebook-grid .btn {
+    flex: 1 1 auto;
+    text-align: center;
   }
 }
