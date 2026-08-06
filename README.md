@@ -19,3 +19,5 @@ Ink
 Hero background	2400×1350px	JPG, ~70-80% quality	2x the display size, sharp on retina phones without bloating load time
 Book cover	1000×1500px minimum (2:3 ratio)	JPG	Matches a real front-cover crop, crisp at the mockup's display size
 Any future icons/logos	SVG if possible, else 2x PNG	SVG or PNG	Vector scales perfectly at any size; the arch/heart/book icons on the page now are already SVG, so they're infinitely crisp for free
+
+stt-press.com
