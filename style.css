@@ -743,6 +743,49 @@ a:focus-visible {
   cursor: default;
 }
 
+.title-card__subtitle {
+  color: var(--ink-soft);
+  font-size: 0.65em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.also-new__bonus {
+  margin-top: 2.5rem;
+}
+
+.bonus-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--parchment);
+}
+
+.bonus-card__cover {
+  width: 64px;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 10px 16px rgba(20, 12, 6, 0.22));
+}
+
+.bonus-card__text {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.bonus-card__text a {
+  color: var(--navy-800);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* COMING SOON / COMING LATER */
 .roadmap {
   padding: 5.5rem 0;
@@ -809,6 +852,13 @@ a:focus-visible {
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.25;
+}
+
+.roadmap-card__desc {
+  margin: 0.55rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.4;
 }
 
 .roadmap-card--later {
@@ -1067,6 +1117,9 @@ a:focus-visible {
   .roadmap { padding: 4.5rem 0; }
   .roadmap-grid,
   .roadmap-grid--later { grid-template-columns: 1fr 1fr; }
+
+  .bonus-card { flex-direction: column; text-align: center; }
+  .bonus-card__text { text-align: center; }
 }
 
 @media (max-width: 480px) {
