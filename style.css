@@ -99,7 +99,7 @@ a:focus-visible {
  
 .heart-mark {
   width: 52px;
-  margin: 0 0 1.4rem;
+  margin: 0 auto 1.4rem;
 }
  
 .heart-mark img {
